@@ -8,7 +8,7 @@ export default {
   name: 'Footer'
 }
 </script>
-<style>
+<style scoped>
   footer{
     background-color: #87f;
     padding: 25px 0;
