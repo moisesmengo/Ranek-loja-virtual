@@ -1,15 +1,29 @@
 <template>
-    <div>
-        BUSCAR
-    </div>
+  <div>
+    <input type="text" name="busca" id="busca" v-model="busca" />
+    <input
+      type="submit"
+      value="Buscar"
+      id="lupa"
+      @click.prevent="buscarProdutos"
+    />
+  </div>
 </template>
 
 <script>
 export default {
-    
-}
+  name: "ProdutosBuscar",
+  data() {
+    return {
+      busca: "",
+    };
+  },
+  methods: {
+    buscarProdutos() {
+      this.$router.push({ query: { q: this.busca } });
+    },
+  },
+};
 </script>
 
-<style>
-    
-</style>
+<style></style>
