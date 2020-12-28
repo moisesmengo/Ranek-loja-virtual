@@ -1,34 +1,40 @@
 <template>
   <section class="produtos-container">
-    <div v-if="produtos && produtos.length" class="produtos">
-      <div v-for="(produto, index) in produtos" :key="index" class="produto">
-        <router-link to="/">
-          <img
-            v-if="produto.fotos"
-            :src="produto.fotos[0].src"
-            :alt="produto.fotos[0].titulo"
-          />
-          <p class="preco">{{ produto.preco }}</p>
-          <h2 class="titulo">{{ produto.nome }}</h2>
-          <p>{{ produto.descricao }}</p>
-        </router-link>
+    <transition mode="out-in">
+      <div v-if="produtos && produtos.length" class="produtos" key="produtos">
+        <div v-for="(produto, index) in produtos" :key="index" class="produto">
+          <router-link to="/">
+            <img
+              v-if="produto.fotos"
+              :src="produto.fotos[0].src"
+              :alt="produto.fotos[0].titulo"
+            />
+            <p class="preco">{{ produto.preco }}</p>
+            <h2 class="titulo">{{ produto.nome }}</h2>
+            <p>{{ produto.descricao }}</p>
+          </router-link>
+        </div>
+        <produtosPaginar :produtosTotal="produtosTotal" :produtosPorPagina=9 />
       </div>
-      <produtosPaginar :produtosTotal="produtosTotal" :produtosPorPagina=9 />
-    </div>
-    <div v-else-if="produtos && produtos.length === 0">
-      <p class="sem-resultados">Busca sem resultados. Busque por outro termo!</p>
-    </div>
+      <div v-else-if="produtos && produtos.length === 0" key="sem-resultados">
+        <p class="sem-resultados">Busca sem resultados. Busque por outro termo!</p>
+      </div>
+      <div v-else key="carregando">
+        <pagina-carregando />
+      </div>
+    </transition>
   </section>
 </template>
 
 <script>
 import { api } from "../../services";
 import { serialize } from "../helpers";
+import PaginaCarregando from './PaginaCarregando.vue';
 import ProdutosPaginar from './ProdutosPaginar.vue';
 
 export default {
   name: "ProdutosLista",
-  components:{ProdutosPaginar},
+  components:{ProdutosPaginar, PaginaCarregando},
   data() {
     return {
       produtos: null,
@@ -43,10 +49,13 @@ export default {
   },
   methods: {
     getProdutos() {
-      api.get(this.url).then(response =>{
+      this.produtos = null
+      setTimeout(()=>{
+        api.get(this.url).then(response =>{
         this.produtosTotal = Number(response.headers['x-total-count'])
         this.produtos = response.data
       })
+      }, 1500)
     },
   },
   watch: {
