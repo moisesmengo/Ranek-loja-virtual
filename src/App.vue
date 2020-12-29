@@ -2,7 +2,9 @@
   <div id="app">
     <Header></Header>
     <main id="main">
-      <router-view/>
+      <transition mode="out-in">
+        <router-view/>
+      </transition>
     </main>
     <Footer></Footer>
   </div>
@@ -66,6 +68,9 @@ export default {
   }
   #main{
     flex: 1;
+  }
+  label{
+    margin-bottom: 5px;
   }
   input, textarea{
     border-radius: 4px;
