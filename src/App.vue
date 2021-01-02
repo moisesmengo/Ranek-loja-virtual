@@ -76,7 +76,7 @@ export default {
     border-radius: 4px;
     border: 1px solid #fff;
     padding: 15px;
-    box-shadow: 0 4px 8px rbga(30, 60, 90 ,.1);
+    box-shadow: 0 4px 8px rbga(30, 60, 90 ,0.1);
     transition: all .3s;
     font-family: 'Comfortaa', cursive;
     font-size: 1rem;
