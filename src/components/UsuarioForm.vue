@@ -34,11 +34,19 @@
 </template>
 
 <script>
+import { mapFields } from '../helpers'
+
 export default {
-    name: 'UsuarioForm'
+    name: 'UsuarioForm',
+    computed:{
+        ...mapFields({
+            fields :[ 'nome', 'email', 'rua', 'cep', 'senha', 'numero', 'bairro', 'cidade', 'estado'],
+            base: 'usuario',
+            mutation: "UPDATE_USUARIO"
+        })
+    }
 }
 </script>
-
 <style scoped>
     form{
         display: grid;
