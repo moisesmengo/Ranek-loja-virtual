@@ -1,44 +1,92 @@
 {
- "usuario":[
-   {
-     "id": "moisesmengo@live.com",
-     "email": "moisesmengo@live.com",
-     "nome": "Moisés Costa",
-     "senha": "123",
-     "rua": "Edilson Crisanto de Morais",
-     "cep": "59214000",
-     "numero": "10",
-     "estado": "RN",
-     "cidade": "Serra de São Bento"
-   }
- ],
- "produto":[
-   {
-     "id": "notebook",
-     "nome": "Notebook",
-     "usuario_id": "moisesmengo@live.com",
-     "preco": "2300",
-     "vendido": "false",
-     "descricao": "Novo modelo de notebook vindo da china",
-     "fotos": null
-   },
-   {
-    "id": "tablet",
-    "nome": "Tablet",
-    "usuario_id": "moisesmengo@live.com",
-    "preco": "800",
-    "vendido": "false",
-    "descricao": "Tablet usado, mas em perfeito estado!",
-    "fotos": null
-  },
-  {
-    "id": "celular",
-    "nome": "Celular",
-    "usuario_id": "moisesmengo@live.com",
-    "preco": "1200",
-    "vendido": "true",
-    "descricao": "Celular Nokia Tijolo",
-    "fotos": null
-  }
- ]   
+  "usuario": [
+    {
+      "id": "moisesmengo@live.com",
+      "email": "moisesmengo@live.com",
+      "nome": "Moisés Costa",
+      "senha": "123",
+      "rua": "Edilson Crisanto de Morais",
+      "cep": "59214000",
+      "numero": "10",
+      "estado": "RN",
+      "cidade": "Serra de São Bento"
+    },
+    {
+      "id": "zefa@zefa.com",
+      "nome": "Zefa",
+      "email": "zefa@zefa.com",
+      "senha": "123",
+      "cep": "59214000",
+      "rua": "ddd",
+      "numero": "12",
+      "bairro": "frei damiao",
+      "cidade": "Serra de São Bento",
+      "estado": "RN"
+    },
+    {
+      "id": "c@c.com",
+      "nome": "CACAA",
+      "email": "c@c.com",
+      "senha": "123",
+      "cep": "59214000",
+      "rua": "yr",
+      "numero": "9",
+      "bairro": "yyy",
+      "cidade": "Serra de São Bento",
+      "estado": "RN"
+    },
+    {
+      "id": "moises.lins@academico.ifrn.edu.br",
+      "nome": "Moi",
+      "email": "moises.lins@academico.ifrn.edu.br",
+      "senha": "123",
+      "cep": "59214000",
+      "rua": "eee",
+      "numero": "ee",
+      "bairro": "ee",
+      "cidade": "Serra de São Bento",
+      "estado": "RN"
+    },
+    {
+      "id": "mizera@mizera.com",
+      "nome": "vai mizera",
+      "email": "mizera@mizera.com",
+      "senha": "123",
+      "cep": "59214000",
+      "rua": "dsdq",
+      "numero": "10",
+      "bairro": "ddd",
+      "cidade": "Serra de São Bento",
+      "estado": "RN"
+    }
+  ],
+  "produto": [
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "moisesmengo@live.com",
+      "preco": "2300",
+      "vendido": "false",
+      "descricao": "Novo modelo de notebook vindo da china",
+      "fotos": null
+    },
+    {
+      "id": "tablet",
+      "nome": "Tablet",
+      "usuario_id": "moisesmengo@live.com",
+      "preco": "800",
+      "vendido": "false",
+      "descricao": "Tablet usado, mas em perfeito estado!",
+      "fotos": null
+    },
+    {
+      "id": "celular",
+      "nome": "Celular",
+      "usuario_id": "moisesmengo@live.com",
+      "preco": "1200",
+      "vendido": "true",
+      "descricao": "Celular Nokia Tijolo",
+      "fotos": null
+    }
+  ]
 }

@@ -32,7 +32,7 @@ export default {
     methods:{
         logar(){
             this.$store.dispatch("getUsuario", this.login.email)
-            this.$route.push({name: "usuario"})
+            this.$router.push({name: "usuario"})
         }
     }
 }
