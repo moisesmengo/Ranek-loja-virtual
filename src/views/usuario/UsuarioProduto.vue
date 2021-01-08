@@ -3,17 +3,24 @@
     <h2>Adicionar Produto</h2>
     <ProdutoAdicionar />
     <h2>Seus Produtos</h2>
-    {{usuario_produtos}}
+    <transition-group v-if="usuario_produtos" name="list" tag="ul">
+      <li v-for="(produto, index) in usuario_produtos" :key="index">
+        <ProdutoItem :produto="produto" >
+          <p> {{produto.descricao}} </p>
+        </ProdutoItem>
+      </li>
+    </transition-group>
   </section>
 </template>
 <script>
 import ProdutoAdicionar from './ProdutoAdicionar'
+import ProdutoItem from './ProdutoItem'
 
 import {mapState, mapActions} from 'vuex'
 
 export default {
   name: "UsuarioProdutos",
-  components:{ProdutoAdicionar},
+  components:{ProdutoAdicionar, ProdutoItem},
   computed:{
     ...mapState(['login', 'usuario', 'usuario_produtos'])
   },
@@ -33,5 +40,7 @@ export default {
 }
 </script>
 <style scoped>
-  
+  h2{
+    margin-bottom: 20px;
+  }
 </style>
