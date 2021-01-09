@@ -6,7 +6,7 @@
     </router-link>
     <div class="info">
       <p class="preco"> {{produto.preco | numeroPreco}} </p>
-      <p class="titulo"> {{ produto.titulo }} </p>
+      <p class="titulo"> {{ produto.nome }} </p>
       <slot></slot>
     </div>
   </div>
@@ -26,6 +26,15 @@ export default {
     grid-gap: 20px;
     margin-bottom: 40px;
     position: relative;
+  }
+  .preco{
+    color: rgb(228, 97, 36);
+    margin-bottom: 3px;
+  }
+  .titulo{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
   }
   .info{
     align-self: end;

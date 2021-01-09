@@ -87,6 +87,38 @@
       "vendido": "true",
       "descricao": "Celular Nokia Tijolo",
       "fotos": null
+    },
+    {
+      "nome": "Cavalo",
+      "preco": "500",
+      "descricao": "vavalo de troia",
+      "fotos": null,
+      "usuario_id": "moisesmengo@live.com",
+      "id": "oMI9uvo"
+    },
+    {
+      "nome": "Moi",
+      "preco": "10",
+      "descricao": "ddddd",
+      "fotos": null,
+      "usuario_id": "moisesmengo@live.com",
+      "id": "YNgaUo9"
+    },
+    {
+      "nome": "Moi",
+      "preco": "10",
+      "descricao": "dfdddddd",
+      "fotos": null,
+      "usuario_id": "moisesmengo@live.com",
+      "id": "srHTLt1"
+    },
+    {
+      "nome": "CACAA",
+      "preco": "34",
+      "descricao": "44343",
+      "fotos": null,
+      "usuario_id": "moises.lins@academico.ifrn.edu.br",
+      "id": "ZNenTuY"
     }
   ]
 }
